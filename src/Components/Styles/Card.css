@@ -1,5 +1,6 @@
-.Card {
-	justify-content: space-evenly;
+.card {
+	justify-content: space-between;
+    padding: 8px;
 	background-color: lemonchiffon;
 	border: 1px solid black;
 	box-shadow: 3px 3px 3px #555;
@@ -8,18 +9,21 @@
 	height: 200px;
 	margin: 1rem;
 	width: 200px;
+	overflow-y: scroll;
 }
 
-.Card-message {
+.card-message {
 	font: 25px Georgia, 'Times New Roman', Times, serif;
 	margin: 0.25rem;
+	overflow-wrap: break-word;
+	hyphens:unset;
 }
 
-.Card-likes {
+.card-likes {
 	margin: 0.25rem;
 }
 
-.Card-buttons {
+.card-buttons {
 	display: flex;
 	justify-content: space-evenly;
 }

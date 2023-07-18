@@ -140,10 +140,12 @@ const Board = ({ board, onDeleteBoardCallback, updateBoardCallback }) => {
         {/* BOARD */}
         <div>
           <CgSidebarOpen
+            title="board changes options"
             className="icons"
             size={30}
             onClick={() => setHideBoardMenu(!hideBoardMenu)}
           />
+          <h3 class="insetshadow-labels" onClick={() => setHideBoardMenu(!hideBoardMenu)}>Make Board Changes</h3>
           <section className={shownBoardMenu}>
             <div>
               <UpdateBoardForm
@@ -211,7 +213,7 @@ const Board = ({ board, onDeleteBoardCallback, updateBoardCallback }) => {
       </div>
 
       <div className="board--cards">
-        <div className="cards">
+        <div className="cards-display">
           {sortedCards.map((card, index) => {
             return (
               <Card

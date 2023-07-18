@@ -10,6 +10,15 @@ body{
   /* cursor: pointer; */
 }
 
+#messageLengthRed {
+  font-size: smaller;
+  color: red;
+}
+
+#messageLength, #messageLengthRed {
+  font-size: smaller;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

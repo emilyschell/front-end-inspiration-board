@@ -19,10 +19,11 @@
   grid-template-rows: 10% 90%;
 }
 
-.cards {
+.cards-display {
   display: flex;
   grid-column: 2;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .icons {
@@ -48,6 +49,20 @@
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
+}
+
+.insetshadow-labels {
+  font-family: "Doris", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  background-color: #b3b3b3;
+  color: transparent;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.7);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  cursor: pointer;
 }
 
 h1 {
