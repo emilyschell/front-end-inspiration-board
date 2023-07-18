@@ -31,6 +31,11 @@
   cursor: pointer;
 }
 
+.icons-selected {
+  color: #C589E8;
+  /* cursor: pointer; */
+}
+
 .insetshadow {
   font-family: "Doris", sans-serif;
   margin: 2%;

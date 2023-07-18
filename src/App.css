@@ -24,8 +24,15 @@ body{
 ul {
   list-style-type: none;
   line-height: 2.5;
-  padding: 0;
+  /* padding: 0; */
   cursor: pointer;
+  text-align: left;
+  padding: 0 20px;
+}
+
+#board-menu-item-icon {
+  display: flex;
+  align-items: center;
 }
 
 .board-container {
@@ -62,6 +69,12 @@ ul {
 }
 
 .board-list--icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.board-list---icons--align {
   display: flex;
   justify-content: space-evenly;
 }

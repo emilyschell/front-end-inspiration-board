@@ -34,8 +34,13 @@
   margin-top: .25rem;
 }
 
-.board-menu-item__selected {
+.board-menu-item-selected {
   color: #80EFD3;
+}
+
+.board-menu-item-selected, .board-menu-item-not-selected{
+  /* color: #80EFD3; */
+  display: flex;
 }
 
 #page-title {

@@ -14,19 +14,19 @@ const SortBoardMenu = ({
             <button
                 onClick={() => onSortByChange('title')}
                 className='board-menu-item'>
-                title{' '}
+                title
                 {sortBy === 'title' && <BiCheck id='board-menu--check-mark' />}
             </button>
             <button
                 onClick={() => onSortByChange('owner')}
                 className='board-menu-item'>
-                owner{' '}
+                owner
                 {sortBy === 'owner' && <BiCheck id='board-menu--check-mark' />}
             </button>
             <button
                 onClick={() => onSortByChange('id')}
                 className='board-menu-item'>
-                date added{' '}
+                date added
                 {sortBy === 'id' && <BiCheck id='board-menu--check-mark' />}
             </button>
             <br />
@@ -34,7 +34,7 @@ const SortBoardMenu = ({
             <button
                 onClick={() => onOrderByChange('asc')}
                 className='board-menu-item'>
-                ascending{' '}
+                ascending
                 {orderBy === 'asc' && <BiCheck id='board-menu--check-mark' />}
             </button>
             <button

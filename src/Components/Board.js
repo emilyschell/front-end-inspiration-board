@@ -13,7 +13,7 @@ import { TiDelete } from "react-icons/ti";
 import { CgSidebarOpen } from "react-icons/cg";
 import { BsStickiesFill } from "react-icons/bs";
 
-const Board = ({ board, onDeleteCallback, updateBoardCallback }) => {
+const Board = ({ board, onDeleteBoardCallback, updateBoardCallback }) => {
   const [cardData, setCardData] = useState([]);
   const [sortBy, setSortBy] = useState("id");
   const [orderBy, setOrderBy] = useState("desc");
@@ -46,7 +46,7 @@ const Board = ({ board, onDeleteCallback, updateBoardCallback }) => {
       });
   };
 
-  useEffect(() => getCards(), [cardData]);
+  useEffect(() => getCards(), []);
 
   const sortedCards = cardData.sort((a, b) => {
     let order = orderBy === "asc" ? 1 : -1;
@@ -88,7 +88,7 @@ const Board = ({ board, onDeleteCallback, updateBoardCallback }) => {
             if (card.id === id) {
               return {
                 ...card,
-                [message]: message,
+                message: message,
               };
             } else {
               return card;
@@ -163,7 +163,7 @@ const Board = ({ board, onDeleteCallback, updateBoardCallback }) => {
               <section className={shownDelete}>
                 {deleteAttempt && (
                   <VerifyDeleteBoard
-                    onDeleteCallback={onDeleteCallback}
+                    onDeleteBoardCallback={onDeleteBoardCallback}
                     onCancelCallback={() => {
                       setDeleteAttempt(false);
                     }}
@@ -186,29 +186,28 @@ const Board = ({ board, onDeleteCallback, updateBoardCallback }) => {
               <NewCardForm boardId={board.id} onAddCardCallback={addNewCard} />
             </div>
             <div>
-          <BiSort
-            className="icons"
-            size={30}
-            onClick={() => setHideSort(!hideSort)}
-          />
-          <section className={shownSort}>
-            <div className="sort-menu--container">
-              <SortMenu
-                sortBy={sortBy}
-                onSortByChange={(sortOption) => {
-                  setSortBy(sortOption);
-                }}
-                orderBy={orderBy}
-                onOrderByChange={(orderOption) => {
-                  setOrderBy(orderOption);
-                }}
+              <BiSort
+                className="icons"
+                size={30}
+                onClick={() => setHideSort(!hideSort)}
               />
+              <section className={shownSort}>
+                <div className="sort-menu--container">
+                  <SortMenu
+                    sortBy={sortBy}
+                    onSortByChange={(sortOption) => {
+                      setSortBy(sortOption);
+                    }}
+                    orderBy={orderBy}
+                    onOrderByChange={(orderOption) => {
+                      setOrderBy(orderOption);
+                    }}
+                  />
+                </div>
+              </section>
             </div>
           </section>
         </div>
-          </section>
-        </div>
-
       </div>
 
       <div className="board--cards">
@@ -238,7 +237,7 @@ Board.propTypes = {
     owner: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
   }),
-  onDeleteCallback: PropTypes.func.isRequired,
+  onDeleteBoardCallback: PropTypes.func.isRequired,
   updateBoardCallback: PropTypes.func.isRequired,
 };
 
