@@ -145,7 +145,12 @@ const Board = ({ board, onDeleteBoardCallback, updateBoardCallback }) => {
             size={30}
             onClick={() => setHideBoardMenu(!hideBoardMenu)}
           />
-          <h3 class="insetshadow-labels" onClick={() => setHideBoardMenu(!hideBoardMenu)}>Make Board Changes</h3>
+          <h3
+            className="insetshadow-labels"
+            onClick={() => setHideBoardMenu(!hideBoardMenu)}
+          >
+            Make Board Changes
+          </h3>
           <section className={shownBoardMenu}>
             <div>
               <UpdateBoardForm
@@ -183,6 +188,13 @@ const Board = ({ board, onDeleteBoardCallback, updateBoardCallback }) => {
             size={25}
             onClick={() => setHideCardMenu(!hideCardMenu)}
           />
+          <h3
+            className="insetshadow-labels"
+            onClick={() => setHideCardMenu(!hideCardMenu)}
+          >
+            Add/Sort Cards
+          </h3>
+
           <section className={shownCardMenu}>
             <div>
               <NewCardForm boardId={board.id} onAddCardCallback={addNewCard} />

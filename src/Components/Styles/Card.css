@@ -16,7 +16,7 @@
 	font: 25px Georgia, 'Times New Roman', Times, serif;
 	margin: 0.25rem;
 	overflow-wrap: break-word;
-	hyphens:unset;
+	hyphens:auto;
 }
 
 .card-likes {
